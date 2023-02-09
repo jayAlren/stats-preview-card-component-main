@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;700&family=Inter:wght@400;700&family=Outfit:wght@300;400;600;700&family=Red+Hat+Display:wght@500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;700&family=Inter:wght@400;700&family=Lexend+Deca:wght@400;700&family=Outfit:wght@300;400;600;700&family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+
+/*
+Primary
+- Very dark blue (main background): hsl(233, 47%, 7%)
+- Dark desaturated blue (card background): hsl(244, 38%, 16%)
+- Soft violet (accent): hsl(277, 64%, 61%)
+*/
+
+/*
+Neutral
+- White (main heading, stats): hsl(0, 0%, 100%)
+- Slightly transparent white (main paragraph): hsla(0, 0%, 100%, 0.75)
+- Slightly transparent white (stat headings): hsla(0, 0%, 100%, 0.6)
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+body {
+	font-family: Inter, sans-serif;
+	font-weight: 400;
+	font-size: 15px;
+	color: hsl(0, 0%, 100%); /* - White (main heading, stats) */
+	background-color: hsl(233, 47%, 7%); /* - Very dark blue (main background) */
+}
+
+.container {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.contain {
+	display: flex;
+	flex-direction: row-reverse;
+	height: 400px;
+	width: 1000px;
+	border: none;
+	border-radius: 10px;
+	background-color: hsl(244, 38%, 16%); /* - Dark desaturated blue (card background) */
+}
+
+.info {
+	flex: 1;
+}
+
+.info-image {
+	flex: 1;
+	background-image: url("./images/image-header-desktop.jpg");
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	overflow: hidden;
+}
+
+.image-overlay {
+	width: 100%;
+	height: 100%;
+	background: hsla(277, 64%, 61%, .9); /* - Soft violet (accent) */
+	mix-blend-mode: multiply;
+}
+
+.info-contain {
+	padding: 60px 50px;
+}
+
+.info-header {
+	font-size: 33px;
+	font-weight: 700;
+	padding: 0 0 20px 0;
+}
+
+.info-header-highlight {
+	color: hsl(277, 64%, 61%); /* - Soft violet (accent) */
+}
+
+.info-description {
+	padding: 0 0 50px 0;
+	color: hsla(0, 0%, 100%, 0.6); /* - Slightly transparent white (stat headings) */
+	line-height: 1.6;
+}
+
+.info-group {
+	display: flex;
+}
+
+.info-group-items {
+	flex: 1;
+}
+
+.info-group-items-count {
+	font-size: 30px;
+	font-weight: 700;
+	padding: 0 0 10px 0;
+}
+
+.info-group-items-data {
+	color: hsla(0, 0%, 100%, 0.6); /* - Slightly transparent white (stat headings) */
+	font-family: Lexend Deca, sans-serif;
+	font-weight: 400;
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+
+
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 10px;
+	font-size: 11px;
+	border-top: 1px dashed hsl(277, 64%, 61%);
+	text-align: center;
+	color: hsl(0, 0%, 100%); /* - White (main heading, stats) */
+}
+
+footer a{
+	color: hsl(228, 45%, 44%);
+}
