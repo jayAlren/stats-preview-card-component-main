@@ -20,9 +20,11 @@ Neutral
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
+	box-sizing: border-box;
 }
 
 body {
+	min-height: 100%;
 	font-family: Inter, sans-serif;
 	font-weight: 400;
 	font-size: 15px;
@@ -89,28 +91,28 @@ body {
 
 .info-group {
 	display: flex;
+	flex-direction: row;
 }
 
 .info-group-items {
 	flex: 1;
+	
+
 }
 
 .info-group-items-count {
-	font-size: 30px;
+	font-size: 26px;
 	font-weight: 700;
 	padding: 0 0 10px 0;
 }
 
 .info-group-items-data {
 	color: hsla(0, 0%, 100%, 0.6); /* - Slightly transparent white (stat headings) */
-	font-family: Lexend Deca, sans-serif;
 	font-weight: 400;
-	font-size: 13px;
+	font-size: 12px;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 }
-
-
 
 footer {
 	position: absolute;
@@ -125,4 +127,67 @@ footer {
 
 footer a{
 	color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 640px) {
+	* {
+		overflow: visible;
+	}
+
+	body {
+		position: relative;
+		text-align: center;
+	}
+
+	main {
+		padding-bottom: 800px;
+	}
+
+	.contain {
+		flex-direction: column;
+		height: 700px;
+		width: 300px;
+	}
+
+	.info {
+		flex: 1.8;
+	}
+
+	.info-image {
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		background-image: url('./images/image-header-mobile.jpg');
+	}
+
+	.info-contain {
+		padding: 30px 25px;
+	}
+
+	.info-header {
+		font-size: 24px;
+		padding: 0 0 20px 0;
+	}
+
+	.info-description {
+		font-size: 14px;
+		padding: 0 0 25px 0;
+		line-height: 1.6;
+	}
+
+	.info-group {
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.info-group-items {
+		line-height: 1.5;
+	}
+
+	.info-group-items-count {
+		font-size: 20px;
+	}
+
+	footer {
+		position: static;
+	}
 }
